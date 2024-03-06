@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/tekbayt-rebuild",
+  basePath: process.env.NODE_ENV === "production" ? "/tekbayt-rebuild" : "",
   distDir: "dist",
 };
 
